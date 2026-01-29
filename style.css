@@ -112,11 +112,18 @@ button {
     gap: 0;
 }
 
+.home-text-container button{
+    width:70%;
+}
 .nav-item {
     margin: 0;
     border-bottom: 1px solid #e0e0e0;
 }
-
+#main-content .waitlist-button {
+    display: block;       /* make it a block so auto margins work */
+    margin: 2rem auto 0;  /* center horizontally, add top spacing */
+    max-width: 320px;     /* optional: constrain width so it looks good on wide screens */
+}
 .nav-item a {
     display: block;
     color: black;
@@ -138,7 +145,7 @@ button {
     align-items: center;
     font-weight: 600;
     padding: 0 5vw;
-    margin-top: 80px;
+    margin-top: 200px;
 }
 
 .home-title {
@@ -174,6 +181,7 @@ button {
 }
 
 
+
     .home-vector {
         display: block;
         position: absolute;
@@ -182,22 +190,6 @@ button {
         width: 20vw;
         height: auto;
         z-index: -1;
-    }
-
-    .home-vector-2 {
-        display: block;
-        position: relative;
-        float: left;
-        z-index: 3;
-        width: 45%;
-        left: 19.5%;
-    }
-
-    .home-vector-3 {
-        display: block;
-        position: relative;
-        float: right;
-        z-index: 1000;
     }
 
  .hero-image-container {
@@ -209,6 +201,7 @@ button {
         margin-top:0;
         z-index:0;
     }
+
     
 .waitlist-button {
     border: none;
@@ -232,7 +225,7 @@ button {
     font-size: 1rem;
 }
 
-#community-title {
+#community-title{ 
     font-size: 2rem;
     margin-bottom: 2vh;
     width: 100%;
@@ -291,12 +284,10 @@ button {
 }
 
 .experience-image {
-    display: none; /* Hide on mobile for better layout */
+    display:none;
 }
 
-.experience-blob {
-    display: none; /* Hide on mobile */
-}
+
 
 .experience-text {
     position: relative;
@@ -325,6 +316,7 @@ button {
     justify-content: center;
     margin-top: 10vh;
     padding: 0 5vw;
+    margin-bottom:100px;
 }
 
 .waitlist-container {
@@ -404,7 +396,7 @@ input {
 
 .footer-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
     margin-top: 2rem;
     padding: 2rem 0;
@@ -418,11 +410,12 @@ input {
     margin: 0;
 }
 
-.footer-logo {
+.footer-logo img {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    width:250px;
 }
 
 .social-icons {
@@ -515,6 +508,7 @@ h4 {
     .waitlist-button,
     .waitlist-button-community {
         font-size: 1.1rem;
+
     }
 
     #community-title {
@@ -538,6 +532,12 @@ h4 {
         display: none;
     }
 
+     #main-content .waitlist-button {
+        align-self: center;   /* center along the cross axis of the flex row */
+        margin: 1rem 0 0;     /* adjust spacing for desktop */
+        width: auto;          
+        max-width: 300px;
+    }
     .menu-toggle {
         display: none;
     }
@@ -639,23 +639,8 @@ h4 {
         z-index: -1;
     }
 
-    .home-vector-2 {
-        display: block;
-        position: relative;
-        float: left;
-        z-index: 3;
-        width: 45%;
-        transform: translateY(-187%);
-        left: 19.5%;
-    }
-
-    .home-vector-3 {
-        display: block;
-        position: relative;
-        float: right;
-        z-index: 1000;
-        transform: translateY(-100%);
-    }
+  
+   
 
     .hero-image-container {
         position: absolute;
@@ -665,12 +650,14 @@ h4 {
         pointer-events: none;
         margin-top:0;
         z-index:0;
+        display:block;
     }
     
     .home-image {
         width: 100%;
         height: auto;
         display: block;
+        position:relative;
     }
 
     button {
@@ -797,15 +784,7 @@ h4 {
         z-index: 2;
     }
 
-    .experience-blob {
-        display: block;
-        position: absolute;
-        top: 11%;
-        left: 0%;
-        width: 25%;
-        height: auto;
-        z-index: 7;
-    }
+
 
     .experience-text {
         position: absolute;
@@ -935,13 +914,14 @@ h4 {
         bottom:70px;
     }
 
-    .footer-logo {
+    .footer-logo img{
         display:flex;
         align-items:flex-start;
         justify-content: left;  /* center horizontally inside footer-brand */
-
+        position:relative;
+        margin-top:80px;
         gap: 10px;
-        width:250px;
+        width:200px;
     }
 
     .footer-divider{
@@ -970,6 +950,9 @@ h4 {
     .navigator-header {
         margin-right: 15vw;
     }
+
+    
+
 }
 
 /* Fix for very small phones */
