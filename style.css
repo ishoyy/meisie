@@ -142,6 +142,7 @@ button {
 }
 
 .home-title {
+    position:relative;
     font-size: 2rem;
     width: 100%;
     font-weight: 700;
@@ -166,29 +167,49 @@ button {
 .home-image {
     width: 100%;
     height: auto;
+    float:right;
     display: block;
     position: relative;
     z-index: -1;
 }
 
-.home-vector {
-    display: none; /* Hide on mobile */
-}
 
-.home-vector-2 {
-    display: none; /* Hide on mobile */
-}
+    .home-vector {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20vw;
+        height: auto;
+        z-index: -1;
+    }
 
-.home-vector-3 {
-    display: none; /* Hide on mobile */
-}
+    .home-vector-2 {
+        display: block;
+        position: relative;
+        float: left;
+        z-index: 3;
+        width: 45%;
+        left: 19.5%;
+    }
 
-.hero-image-container {
-    position: relative;
-    width: 100%;
-    margin-top: 2rem;
-}
+    .home-vector-3 {
+        display: block;
+        position: relative;
+        float: right;
+        z-index: 1000;
+    }
 
+ .hero-image-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 54.5vw;
+        pointer-events: none;
+        margin-top:0;
+        z-index:0;
+    }
+    
 .waitlist-button {
     border: none;
     border-radius: 50px;
@@ -891,8 +912,9 @@ h4 {
         color: #f8f6f5;
         font-family: sans-serif;
         width: 100%;
-        padding: 0 80px 50px;
+        padding: 0 120px 30px;
         box-sizing: border-box;
+        margin-top:100px;
     }
 
     .footer-content {
@@ -900,33 +922,42 @@ h4 {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        margin-top: 50px;
-        padding: 50px 0;
+        margin-top: 20px; /* reduced from 50px to tighten space above divider */
     }
 
     .footer-brand {
+        position:relative;
         max-width: 280px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 20px;
+        align-items: flex-start;
+        margin-top: 0px;
+        bottom:70px;
     }
 
     .footer-logo {
-        display: flex;
-        align-items: center;
-        gap: 30px;
+        display:flex;
+        align-items:flex-start;
+        justify-content: left;  /* center horizontally inside footer-brand */
+
+        gap: 10px;
+        width:250px;
+    }
+
+    .footer-divider{
+        margin-top:0;
     }
 
     .footer-column {
-        font-weight: 100;
+        font-weight: 300;
         text-align: left;
+        font-size:18px;
     }
+
 
     .footer-column h4 {
         margin-bottom: 12px;
-        font-weight: 600;
+        font-weight: 700;
     }
 }
 

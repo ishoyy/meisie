@@ -15,7 +15,7 @@
     <img class="mobile-logo" src="./sources/home-logo.png" alt="Logo">
     
     <!-- Mobile Menu Toggle (hamburger) -->
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+    <button class="menu-toggle" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
@@ -28,9 +28,9 @@
         <div class="navigator-header">
             <nav>
                 <ul class="nav-links">
-                    <li class="nav-item"><a href="#container" onclick="closeMenu()">Home</a></li>
-                    <li class="nav-item"><a href="#main-content-community" onclick="closeMenu()">Communities</a></li>
                     <li class="nav-item"><a href="#main-content-waitlist" onclick="closeMenu()">Winners</a></li>
+                    <li class="nav-item"><a href="#main-content-community" onclick="closeMenu()">Communities</a></li>
+                    <li class="nav-item"><a href="#container" onclick="closeMenu()">Home</a></li>
                 </ul>
             </nav>
         </div>
@@ -66,7 +66,7 @@
                 <div class="box-container">
                     <div class="box">
                         <div class="half-circle"></div>
-                        <img src="./sources/connect-vector.png" class="icon" alt="Connect icon">
+                        <img src="./sources/connect-vector.png" class="icon">
                         <div class="box-text">
                             <p class="box-title">Authentic Connections</p>
                             <p>Build meaningful relationships with women who understand and support your vision.</p>
@@ -75,7 +75,7 @@
                     
                     <div class="box">
                         <div class="half-circle"></div>
-                        <img src="./sources/up-arrow-vector.png" class="icon" alt="Growth icon">
+                        <img src="./sources/up-arrow-vector.png" class="icon">
                         <div class="box-text">
                             <p class="box-title">Career Growth</p>
                             <p>Access opportunities and resources to accelerate your professional development.</p>
@@ -84,7 +84,7 @@
                     
                     <div class="box">
                         <div class="half-circle"></div>
-                        <img src="./sources/share-vector.png" class="icon" alt="Share icon">
+                        <img src="./sources/share-vector.png" class="icon">
                         <div class="box-text">
                             <p class="box-title">Share Knowledge</p>
                             <p>Learn from experts, share your expertise, and grow in a collaborative environment.</p>
@@ -93,10 +93,10 @@
                     
                     <div class="box">
                         <div class="half-circle"></div>
-                        <img src="./sources/hand-vector.png" class="icon" alt="Safe space icon">
+                        <img src="./sources/hand-vector.png" class="icon">
                         <div class="box-text">
                             <p class="box-title">Safe Space</p>
-                            <p>A women-only platform where you can be authentic, and bold without judgement.</p>
+                            <p>A women-only platform where you can be authentic, and bold wihtout judgement.</p>
                         </div>
                     </div>
                 </div>
@@ -107,9 +107,9 @@
         <div class="experience-page">
             <div class="experience-container">
                 <div class="experience-box">
-                    <img src="./sources/communities-bg-vector.png" alt="Experience background" class="experience-bg">
-                    <img src="./sources/communities-vector-blob.png" alt="Experience blob" class="experience-blob">
-                    <img src="./sources/communities-img.png" alt="Experience image" class="experience-image">
+                    <img src="./sources/communities-bg-vector.png" alt="Experience 1" class="experience-bg">
+                    <img src="./sources/communities-vector-blob.png" alt="Experience 1" class="experience-blob">
+                    <img src="./sources/communities-img.png" alt="Experience 1" class="experience-image">
                     <div class="experience-text">
                         <h1 class="experience-title">What You'll Experience in Meisie</h1>
                         <p>A curated women-only environment designed to help you flourish personally and professionally.</p>
@@ -132,14 +132,14 @@
                 </div>
                 <form class="input-container" action="/action_page.php">
                     <div class="name-address-container">
-                        <input type="text" name="fname" placeholder="Full Name *" required>
-                        <input type="email" name="email" placeholder="Email Address *" required>
+                        <input type="text" name="fname" placeholder="Full Name *">
+                        <input type="email" name="email" placeholder="Email Address *">
                     </div>
                     <div class="occupation-community-container">
-                        <input type="text" name="occupation" placeholder="Occupation *" required>
-                        <textarea name="community-interest" style="height: 30vh;" placeholder="What are you looking for in this community? *" class="community-textarea" required></textarea>
+                        <input type="text" name="occupation" placeholder="Occupation *">
+                        <textarea name="community-interest" style="height: 30vh;" placeholder="What are you looking for in this community? *" class="community-textarea"></textarea>
                     </div>
-                    <button class="waitlist-button" type="submit">Secure my spot</button>
+                    <button class="waitlist-button">Secure my spot</button>
                 </form>
             </div>
         </div>
@@ -149,16 +149,16 @@
                 <div class="footer-brand">
                     <div class="footer-logo">
                         <div class="logo-text">
-                            <img class="logo" src="./sources/footer-logo.png" alt="Logo" style="display: block;">
+                            <img class="logo" src="./sources/footer-logo.png" alt="Logo">
                         </div>
                     </div>
                     <div class="social-icons">
-                        <a href="#" aria-label="Twitter"><img src="./sources/twitter-icon.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Facebook"><img src="./sources/facebook-icon.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Instagram"><img src="./sources/instagram-icon.png" alt="Instagram"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="./sources/linkedin-icon.png" alt="LinkedIn"></a>
+                        <img src="./sources/twitter-icon.png" alt="Twitter">
+                        <img src="./sources/facebook-icon.png" alt="Facebook">
+                        <img src="./sources/instagram-icon.png" alt="Instagram">
+                        <img src="./sources/linkedin-icon.png" alt="Linkedin">
                     </div>
-                    <p class="follow-text">Follow us</p>
+                    <p class="follow-text" ">Follow us</p>
                 </div>
                 
                 <div class="footer-column">
@@ -182,21 +182,15 @@
         function toggleMenu() {
             const menu = document.querySelector('.navigator-header');
             const overlay = document.querySelector('.menu-overlay');
-            const toggle = document.querySelector('.menu-toggle');
-            
             menu.classList.toggle('active');
             overlay.classList.toggle('active');
-            toggle.classList.toggle('active');
         }
         
         function closeMenu() {
             const menu = document.querySelector('.navigator-header');
             const overlay = document.querySelector('.menu-overlay');
-            const toggle = document.querySelector('.menu-toggle');
-            
             menu.classList.remove('active');
             overlay.classList.remove('active');
-            toggle.classList.remove('active');
         }
     </script>
 </body>
