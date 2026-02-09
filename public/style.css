@@ -48,6 +48,8 @@ html {
     background-color: #4b2e38;
     display: block;
     transition: all 0.3s ease;
+        z-index: 2000;
+
 }
 
 /* Menu overlay */
@@ -64,6 +66,7 @@ html {
 
 .menu-overlay.active {
     display: block;
+
 }
 
 .align-logo-main-content {
@@ -77,11 +80,12 @@ html {
     margin-right: 5vw;
 }
 
+
 button {
     font-weight: 700;
     background-color: #4b2e38;
     color: #E9B8B2;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 0.8rem 1.5rem;
     transition: all 0.3s ease;
 }
@@ -94,7 +98,7 @@ button {
     max-width: 300px;
     height: 100vh;
     background-color: #f8f6f5;
-    z-index: 999;
+    z-index: 2001;
     transition: right 0.3s ease;
     padding-top: 80px;
 }
@@ -148,7 +152,7 @@ button {
     align-items: center;
     font-weight: 600;
     padding: 0 5vw;
-    margin-top: 200px;
+    margin-top:20vh;
 }
 
 .home-title {
@@ -156,7 +160,6 @@ button {
     font-size: 2rem;
     width: 100%;
     font-weight: 700;
-    margin-top: 5vh;
     text-align: center;
 }
 
@@ -165,6 +168,7 @@ button {
     padding-bottom: 3vh;
     font-size: 1rem;
     text-align: center;
+    z-index:200;
 }
 
 .logo {
@@ -180,7 +184,8 @@ button {
     float:right;
     display: block;
     position: relative;
-    z-index: -1;
+    z-index: -12;
+    
 }
 
 .home-vector {
@@ -193,14 +198,14 @@ button {
     z-index: -1;
 }
 
-.hero-image-container {
-    position: absolute;
+.hero-image-container { 
+    position:absolute;
     top: 0;
     right: 0;
     width: 54.5vw;
     pointer-events: none;
     margin-top:0;
-    z-index:0;
+    z-index:-19;
 }
 
 .waitlist-button {
@@ -211,7 +216,9 @@ button {
     font-family: "Quicksand", sans-serif;
     font-weight: 700;
     padding: 1rem 2rem;
-    font-size: 1rem;
+    font-size: 20px;
+    width:fit-content;
+
 }
 
 .waitlist-button-community {
@@ -223,6 +230,9 @@ button {
     cursor: pointer;
     text-decoration: none;
     font-size: 1rem;
+            width:fit-content;
+            font-size:20px;
+
 }
 
 #community-title{ 
@@ -372,8 +382,9 @@ input {
     margin-top: 1rem;
     padding: 1rem 2rem;
     align-self: center;
-    width: 100%;
-    max-width: 300px;
+    width: fit-content;
+        max-width: 300px;
+    font-size:20px;
 }
 
 .waitlist-text-container {
@@ -411,9 +422,9 @@ input {
 .footer-content {
     display: flex;
     flex-direction: column-reverse;
-    gap: 2rem;
-    margin-top: 2rem;
-    padding: 2rem 0;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem 0 0;
 }
 
 .footer-brand {
@@ -525,6 +536,8 @@ h4 {
         font-size: 1.1rem;
     }
 
+   
+
     .box-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -541,6 +554,8 @@ h4 {
     .experience-title {
         font-size: 2rem;
     }
+
+
 
     .name-address-container {
         flex-direction: row;
@@ -573,7 +588,7 @@ h4 {
     /* Show desktop logo */
     .logo {
         display: block;
-        width: 11.7vw;
+        width: 13vw;
         margin-top: 9vh;
     }
 
@@ -589,14 +604,14 @@ h4 {
 
     .navigator-header {
         position: absolute;
-        top: 10px;
-        right: 0;
+        top: -34px;
+        right: 40px;
         width: auto;
         height: auto;
         background: transparent;
         padding-top: 0;
         margin-top: 0;
-        margin-right: 5vw;
+        margin-right: 6vw;
         margin-left: 0;
         z-index: 100;
     }
@@ -646,9 +661,9 @@ h4 {
     }
 
     .home-text {
-        width: 24vw;
+        width: 28vw;
         padding-bottom: 5vh;
-        font-size: 20px;
+        font-size: 24px;
         text-align: left;
     }
 
@@ -684,7 +699,7 @@ h4 {
         font-weight: 700;
         background-color: #4b2e38;
         color: #E9B8B2;
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 1rem;
     }
 
@@ -692,19 +707,20 @@ h4 {
         border: none;
         border-radius: 50px;
         cursor: pointer;
+        font-size:26px;
         text-decoration: none;
         font-family: "Quicksand", sans-serif;
         font-weight: 700;
     }
 
-    .waitlist-button-community {
-        background-color: #4b2e38;
-        color: #E9B8B2;
-        padding: 16px 32px;
+     .waitlist-button-community {
         border: none;
-        cursor: pointer;
-        text-decoration: none;
         border-radius: 50px;
+        cursor: pointer;
+        font-size:26px;
+        text-decoration: none;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
     }
 
     #community-title {
@@ -773,6 +789,7 @@ h4 {
     .box-title {
         font-weight: 700;
         font-size: 20px;
+        
     }
 
     .box-text {
@@ -784,6 +801,8 @@ h4 {
         position: relative;
         display: block;
         width: 100%;
+        
+        
     }
 
     .experience-bg {
@@ -810,6 +829,7 @@ h4 {
         right: 10%;
         padding: 0;
         z-index: 3;
+        font-size:20px;
         max-width: 30vw;
     }
 
@@ -822,6 +842,7 @@ h4 {
         padding-left: 10px;
         margin: 0;
         list-style-position: inside;
+        
     }
 
     .experience-text li {
@@ -967,6 +988,18 @@ h4 {
     .navigator-header {
         margin-right: 15vw;
     }
+
+    .experience-title{
+        max-width:100%;
+        font-size:2.1em;
+        
+    }
+
+    .experience-text{
+        margin-bottom:20px;
+        font-size:1.3em;
+        
+    }
 }
 
 /* Fix for very small phones */
@@ -1042,6 +1075,14 @@ h4 {
       font-size: 16px;
       cursor: pointer;
     }
+
+    a{
+        margin-top: 40px;
+        font-size: 14px;
+            color: white;
+
+    }
+  
 
     .thank-you-button:hover {
       opacity: 0.9;
