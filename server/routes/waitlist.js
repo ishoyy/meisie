@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
     const { fullName, email, occupation, interest } = req.body;
     
     // Validate required fields
-    if (!fullName || !email || !occupation || !interest) {
+    if (!fullName || !email || !occupation || !message) {
         return res.status(400).json({ 
             success: false, 
             error: 'All fields are required' 
@@ -15,9 +15,9 @@ router.post('/', (req, res) => {
     }
     
     // Insert into database
-    const query = `INSERT INTO users (fullName, email, occupation, interest) VALUES (?, ?, ?, ?)`;
+    const query = `INSERT INTO users (name, email, occupation, message) VALUES (?, ?, ?, ?)`;
     
-    db.run(query, [fullName, email, occupation, interest], function(err) {
+    db.run(query, [name, email, occupation, message], function(err) {
         if (err) {
             console.error('Database error:', err);
             return res.status(500).json({ 

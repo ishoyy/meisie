@@ -4,7 +4,7 @@ const express = require('express');
 const path = require('path');
 
 const waitlistRoute = require('./routes/waitlist');
-
+console.log('waitlistRoute type:', typeof waitlistRoute);
 const app = express();
 
 // Parse JSON bodies
