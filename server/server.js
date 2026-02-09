@@ -1,6 +1,8 @@
 // server.js - Main server file
+
 const express = require('express');
 const path = require('path');
+
 const waitlistRoute = require('./routes/waitlist');
 
 const app = express();
